@@ -19,45 +19,11 @@
             height: 16px;
             fill: #e53935;
         }
-
-        .stat-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 0.5rem;
-            background: rgba(0, 0, 0, 0.2);
-            padding: 0.5rem;
-            border-radius: 4px;
-            margin: 1rem 0;
-            font-size: 0.9rem;
-        }
-
-        .drop-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-        }
-
-        .drop-table th {
-            text-align: left;
-            color: var(--accent-color);
-            border-bottom: 1px solid var(--border-color);
-            padding: 4px;
-        }
-
-        .drop-table td {
-            padding: 4px;
-            border-bottom: 1px solid #333;
-        }
-
-        .boss-card {
-            border: 2px solid #ff4444;
-            box-shadow: 0 0 15px rgba(255, 68, 68, 0.2);
-        }
     </style>
 </head>
 
 <body>
-    <nav class="navbar">
+    <div class="navbar">
         <div class="logo">DRAKONIA SMP</div>
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
@@ -65,19 +31,26 @@
             <li><a href="accessories.html">Accesorios</a></li>
             <li><a href="updates.html">Actualizaciones</a></li>
         </ul>
-    </nav>
+    </div>
 
-    <header class="hero">
-        <h1>Bestiario de Drakonia</h1>
-        <p>Una guía de las criaturas que habitan estas tierras. Conoce sus debilidades y recompensas.</p>
-    </header>
+    <div class="hero">
+        <h1>Bestiario</h1>
+        <p>Conoce a las criaturas y peligros que acechan en las tierras de Drakonia.</p>
+    </div>
 
     <div class="container">
-        <!-- New Section: Criaturas Básicas -->
-        <h2>Criaturas Básicas</h2>
-        <div class="grid">
+        <!-- Filter Controls -->
+        <div class="filter-controls">
+            <button class="filter-btn active" onclick="filterMobs('all')">Todos</button>
+            <button class="filter-btn" onclick="filterMobs('low')">Peligro Bajo (1-3)</button>
+            <button class="filter-btn" onclick="filterMobs('medium')">Peligro Medio (4-6)</button>
+            <button class="filter-btn" onclick="filterMobs('high')">Peligro Alto (7+)</button>
+        </div>
+
+        <h2>Criaturas de Drakonia</h2>
+        <div class="grid" id="mob-grid">
             <!-- Esqueleto Cuero -->
-            <div class="card">
+            <div class="card" data-danger="1">
                 <div class="card-header">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24">
@@ -88,6 +61,8 @@
                     <div>
                         <h3 class="card-title">Esqueleto de Cuero</h3>
                         <div class="danger-level" title="Peligro: 1/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
                             <!-- 1 Skull -->
                             <svg class="skull-icon-small" viewBox="0 0 24 24">
                                 <path
@@ -126,7 +101,7 @@
             </div>
 
             <!-- Zombie Cuero -->
-            <div class="card">
+            <div class="card" data-danger="1">
                 <div class="card-header">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24">
@@ -137,6 +112,8 @@
                     <div>
                         <h3 class="card-title">Zombie de Cuero</h3>
                         <div class="danger-level" title="Peligro: 1/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
                             <!-- 1 Skull -->
                             <svg class="skull-icon-small" viewBox="0 0 24 24">
                                 <path
@@ -173,8 +150,9 @@
                     </table>
                 </div>
             </div>
+
             <!-- Minero -->
-            <div class="card">
+            <div class="card" data-danger="2">
                 <div class="card-header">
                     <div class="card-icon">
                         <svg viewBox="0 0 24 24">
@@ -185,6 +163,8 @@
                     <div>
                         <h3 class="card-title">Minero Maldito</h3>
                         <div class="danger-level" title="Peligro: 2/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
                             <!-- 2 Skulls -->
                             <svg class="skull-icon-small" viewBox="0 0 24 24">
                                 <path
@@ -225,220 +205,276 @@
                     </table>
                 </div>
             </div>
+
+            <!-- Escarabajo -->
+            <div class="card" data-danger="2">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Escarabajo</h3>
+                        <div class="danger-level" title="Peligro: 2/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Pequeño pero venenoso.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Jungla (Superficie)</em></p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 18</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
+                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.30</span>
+                    </div>
+                    <strong>Botín:</strong>
+                    <ul>
+                        <li><a href="accessories.html">Escarabajo Dorado</a> (5%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cangrejo -->
+            <div class="card" data-danger="3">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Cangrejo</h3>
+                        <div class="danger-level" title="Peligro: 3/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Habitante de las costas, con pinzas afiladas.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Playas / Costas</em></p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
+                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.20</span>
+                    </div>
+                    <strong>Botín:</strong>
+                    <ul>
+                        <li>Anillo Cangrejo (10%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Escorpion -->
+            <div class="card" data-danger="4">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Escorpión</h3>
+                        <div class="danger-level" title="Peligro: 4/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Ataca con veneno mortal.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Desiertos</em></p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 28</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
+                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.32</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slimiel -->
+            <div class="card" data-danger="3">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Slimiel</h3>
+                        <div class="danger-level" title="Peligro: 3/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Slime hecho de miel pegajosa.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Bosques de Flores / Jungla</em></p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slimlavera -->
+            <div class="card" data-danger="4">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Slimlavera</h3>
+                        <div class="danger-level" title="Peligro: 4/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Un slime fusionado con restos óseos.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Superficie (Nocturno)</em></p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 35</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
+                    </div>
+                    <strong>Botín:</strong>
+                    <ul>
+                        <li><a href="accessories.html">Calavera de Slime</a> (5%)</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Slimar Grande -->
+            <div class="card" data-danger="5">
+                <div class="card-header">
+                    <div>
+                        <h3 class="card-title">Slimar (Grande)</h3>
+                        <div class="danger-level" title="Peligro: 5/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE PELIGRO:</span>
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>Una masa gigante de experiencia.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Superficie</em></p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 50</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Arañas -->
-    <h2>Arañas</h2>
-    <div class="grid">
-        <!-- Escarabajo -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="card-title">Escarabajo</h3>
-                    <div class="danger-level" title="Peligro: 2/10">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+    <h2 style="margin-top: 3rem; text-align: center;">Jefes (Bosses)</h2>
+    <div class="container">
+        <div class="grid">
+            <!-- Guardian de Hierro -->
+            <div class="card boss-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.95L7,12.8L12,2L17,12.8L12,11.95Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Guardián de Hierro</h3>
+                        <div class="danger-level" title="Peligro: 6/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
+                                DE
+                                PELIGRO:</span>
+                            <span style="color:red; font-weight:bold;">💀 x 6</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-content">
-                <p>Pequeño pero venenoso.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 18</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
-                    <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.30</span>
+                <div class="card-content">
+                    <p>Golem corrupto de inmensa resistencia.</p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 250</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
+                    </div>
+                    <strong>Botín:</strong>
+                    <ul>
+                        <li><a href="accessories.html">Mejora de Hierro</a> (100%)</li>
+                        <li>Hierro (100%)</li>
+                    </ul>
                 </div>
             </div>
-        </div>
 
-        <!-- Cangrejo -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="card-title">Cangrejo</h3>
-                    <div class="danger-level" title="Peligro: 3/10">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+            <!-- Caballero Poseido -->
+            <div class="card boss-card">
+                <div class="card-header">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12,2A9,9 0 0,0 3,11C3,14.03 4.53,16.72 6.9,18.25L5.7,21.77L7.6,22.42L10.38,15.5C10.9,15.67 11.45,15.75 12,15.75C16.97,15.75 21,11.72 21,6.75A9,9 0 0,0 12,2M10.5,8A1.5,1.5 0 1,1 12,9.5A1.5,1.5 0 0,1 10.5,8M15,11H9V10H15V11Z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="card-title">Caballero Poseído</h3>
+                        <div class="danger-level" title="Peligro: 8/10">
+                            <span style="color:red; font-weight:bold;">💀 x 8</span>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="card-content">
-                <p>Habitante de las costas, con pinzas afiladas.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
-                    <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.20</span>
+                <div class="card-content">
+                    <p>Un antiguo héroe caído controlado por fuerzas oscuras. ¡Cuidado con su segunda fase!</p>
+                    <div class="stat-grid">
+                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 500+</span>
+                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 1-4</span>
+                    </div>
+                    <strong>Botín:</strong>
+                    <ul>
+                        <li>Placa Kobold</li>
+                        <li>Espada de Caballero</li>
+                    </ul>
                 </div>
             </div>
         </div>
-
-        <!-- Escorpion -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="card-title">Escorpión</h3>
-                    <div class="danger-level" title="Peligro: 4/10">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <p>Ataca con veneno mortal.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 28</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
-                    <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.32</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Slimes -->
-    <h2>Slimes</h2>
-    <div class="grid">
-        <!-- Slimiel -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="card-title">Slimiel</h3>
-                    <div class="danger-level" title="Peligro: 3/10">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <p>Slime hecho de miel pegajosa.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
-                </div>
-            </div>
-        </div>
-
-        <!-- Slimlavera -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="card-title">Slimlavera</h3>
-                    <div class="danger-level" title="Peligro: 4/10">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <p>Un slime fusionado con restos óseos.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 35</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
-                </div>
-                <strong>Botín:</strong>
-                <ul>
-                    <li><a href="accessories.html">Calavera de Slime</a> (5%)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Slimar Grande -->
-        <div class="card">
-            <div class="card-header">
-                <div>
-                    <h3 class="card-title">Slimar (Grande)</h3>
-                    <div class="danger-level" title="Peligro: 5/10">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <p>Una masa gigante de experiencia.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 50</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <h2 style="margin-top: 3rem;">Jefes (Bosses)</h2>
-    <div class="grid">
-        <!-- Guardian de Hierro -->
-        <div class="card boss-card">
-            <div class="card-header">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.95L7,12.8L12,2L17,12.8L12,11.95Z" />
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="card-title">Guardián de Hierro</h3>
-                    <div class="danger-level" title="Peligro: 6/10">
-                        <span style="color:red; font-weight:bold;">💀 x 6</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <p>Golem corrupto de inmensa resistencia.</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 250</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
-                </div>
-                <strong>Botín:</strong>
-                <ul>
-                    <li><a href="accessories.html">Mejora de Hierro</a> (100%)</li>
-                    <li>Hierro (100%)</li>
-                </ul>
-            </div>
-        </div>
-
-        <!-- Caballero Poseido -->
-        <div class="card boss-card">
-            <div class="card-header">
-                <div class="card-icon">
-                    <svg viewBox="0 0 24 24">
-                        <path
-                            d="M12,2A9,9 0 0,0 3,11C3,14.03 4.53,16.72 6.9,18.25L5.7,21.77L7.6,22.42L10.38,15.5C10.9,15.67 11.45,15.75 12,15.75C16.97,15.75 21,11.72 21,6.75A9,9 0 0,0 12,2M10.5,8A1.5,1.5 0 1,1 12,9.5A1.5,1.5 0 0,1 10.5,8M15,11H9V10H15V11Z" />
-                    </svg>
-                </div>
-                <div>
-                    <h3 class="card-title">Caballero Poseído</h3>
-                    <div class="danger-level" title="Peligro: 8/10">
-                        <span style="color:red; font-weight:bold;">💀 x 8</span>
-                    </div>
-                </div>
-            </div>
-            <div class="card-content">
-                <p>Un antiguo héroe caído controlado por fuerzas oscuras. ¡Cuidado con su segunda fase!</p>
-                <div class="stat-grid">
-                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 500+</span>
-                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 1-4</span>
-                </div>
-                <strong>Botín:</strong>
-                <ul>
-                    <li>Placa Kobold</li>
-                    <li>Monedas Plata</li>
-                </ul>
-            </div>
-        </div>
-    </div>
     </div>
 
     <footer>
         <p>&copy; 2026 Drakonia SMP - Todos los derechos reservados.</p>
     </footer>
+
+    <script>
+        function filterMobs(level) {
+            const cards = document.querySelectorAll('#mob-grid .card');
+            const buttons = document.querySelectorAll('.filter-btn');
+
+            // Update active button
+            buttons.forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            cards.forEach(card => {
+                const danger = parseInt(card.getAttribute('data-danger'));
+
+                if (level === 'all') {
+                    card.style.display = 'block';
+                } else if (level === 'low') {
+                    if (danger >= 1 && danger <= 3) card.style.display = 'block';
+                    else card.style.display = 'none';
+                } else if (level === 'medium') {
+                    if (danger >= 4 && danger <= 6) card.style.display = 'block';
+                    else card.style.display = 'none';
+                } else if (level === 'high') {
+                    if (danger >= 7) card.style.display = 'block';
+                    else card.style.display = 'none';
+                }
+            });
+        }
+    </script>
 </body>
 
 </html>
