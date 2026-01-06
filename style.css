@@ -251,6 +251,19 @@ footer {
     color: #fff;
     border-color: var(--accent-color);
 }
+
+.star-icon {
+    width: 16px;
+    height: 16px;
+    margin-right: 2px;
+}
+
+.drop-source {
+    font-size: 0.8rem;
+    color: #aaa;
+    margin-bottom: 0.5rem;
+}
+
 /* Drop Tables - Box Style */
 .drop-table {
     width: 100%;
@@ -273,15 +286,22 @@ footer {
     text-align: left;
 }
 
-.drop-table th:first-child,
-.drop-table td:first-child {
-    width: 70%;
+/* Column Widths */
+.drop-table th:nth-child(1),
+.drop-table td:nth-child(1) {
+    width: 55%;
 }
 
-.drop-table th:last-child,
-.drop-table td:last-child {
+.drop-table th:nth-child(2),
+.drop-table td:nth-child(2) {
+    width: 25%;
+    text-align: center;
+}
+
+.drop-table th:nth-child(3),
+.drop-table td:nth-child(3) {
+    width: 20%;
     text-align: right;
-    width: 30%;
 }
 
 .drop-table th {
