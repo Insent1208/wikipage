@@ -63,6 +63,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="mobs.html">Bestiario</a></li>
             <li><a href="accessories.html">Accesorios</a></li>
+            <li><a href="updates.html">Actualizaciones</a></li>
         </ul>
     </nav>
 
@@ -97,6 +98,9 @@
                 </div>
                 <div class="card-content">
                     <p>Esqueletos que han logrado equiparse con lo básico.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Cavernas (Nivel < 50)</em>
+                    </p>
                     <div class="stat-grid">
                         <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 15</span>
                         <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
@@ -143,6 +147,9 @@
                 </div>
                 <div class="card-content">
                     <p>Caminantes protegidos.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Cavernas (Nivel < 50)</em>
+                    </p>
                     <div class="stat-grid">
                         <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 20</span>
                         <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
@@ -192,6 +199,9 @@
                 </div>
                 <div class="card-content">
                     <p>Antiguos mineros corruptos.</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
+                            Aparición: Profundidades (Nivel < 30)</em>
+                    </p>
                     <div class="stat-grid">
                         <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 35</span>
                         <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
@@ -216,69 +226,214 @@
                 </div>
             </div>
         </div>
+    </div>
 
-        <h2 style="margin-top: 3rem;">Jefes (Bosses)</h2>
-        <div class="grid">
-            <!-- Guardian de Hierro -->
-            <div class="card boss-card">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.95L7,12.8L12,2L17,12.8L12,11.95Z" />
-                        </svg>
+    <!-- Arañas -->
+    <h2>Arañas</h2>
+    <div class="grid">
+        <!-- Escarabajo -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Escarabajo</h3>
+                    <div class="danger-level" title="Peligro: 2/10">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
                     </div>
-                    <div>
-                        <h3 class="card-title">Guardián de Hierro</h3>
-                        <div class="danger-level" title="Peligro: 6/10">
-                            <span style="color:red; font-weight:bold;">💀 x 6</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Golem corrupto de inmensa resistencia.</p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 250</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <ul>
-                        <li><a href="accessories.html">Mejora de Hierro</a> (100%)</li>
-                        <li>Hierro (100%)</li>
-                    </ul>
                 </div>
             </div>
-
-            <!-- Caballero Poseido -->
-            <div class="card boss-card">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12,2A9,9 0 0,0 3,11C3,14.03 4.53,16.72 6.9,18.25L5.7,21.77L7.6,22.42L10.38,15.5C10.9,15.67 11.45,15.75 12,15.75C16.97,15.75 21,11.72 21,6.75A9,9 0 0,0 12,2M10.5,8A1.5,1.5 0 1,1 12,9.5A1.5,1.5 0 0,1 10.5,8M15,11H9V10H15V11Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Caballero Poseído</h3>
-                        <div class="danger-level" title="Peligro: 8/10">
-                            <span style="color:red; font-weight:bold;">💀 x 8</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Un antiguo héroe caído controlado por fuerzas oscuras. ¡Cuidado con su segunda fase!</p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 500+</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 1-4</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <ul>
-                        <li>Placa Kobold</li>
-                        <li>Monedas Plata</li>
-                    </ul>
+            <div class="card-content">
+                <p>Pequeño pero venenoso.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 18</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
+                    <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.30</span>
                 </div>
             </div>
         </div>
+
+        <!-- Cangrejo -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Cangrejo</h3>
+                    <div class="danger-level" title="Peligro: 3/10">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Habitante de las costas, con pinzas afiladas.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
+                    <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.20</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Escorpion -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Escorpión</h3>
+                    <div class="danger-level" title="Peligro: 4/10">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Ataca con veneno mortal.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 28</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
+                    <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.32</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slimes -->
+    <h2>Slimes</h2>
+    <div class="grid">
+        <!-- Slimiel -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Slimiel</h3>
+                    <div class="danger-level" title="Peligro: 3/10">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Slime hecho de miel pegajosa.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slimlavera -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Slimlavera</h3>
+                    <div class="danger-level" title="Peligro: 4/10">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Un slime fusionado con restos óseos.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 35</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
+                </div>
+                <strong>Botín:</strong>
+                <ul>
+                    <li><a href="accessories.html">Calavera de Slime</a> (5%)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slimar Grande -->
+        <div class="card">
+            <div class="card-header">
+                <div>
+                    <h3 class="card-title">Slimar (Grande)</h3>
+                    <div class="danger-level" title="Peligro: 5/10">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                        <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Una masa gigante de experiencia.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 50</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2 style="margin-top: 3rem;">Jefes (Bosses)</h2>
+    <div class="grid">
+        <!-- Guardian de Hierro -->
+        <div class="card boss-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M12,11.95L7,12.8L12,2L17,12.8L12,11.95Z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="card-title">Guardián de Hierro</h3>
+                    <div class="danger-level" title="Peligro: 6/10">
+                        <span style="color:red; font-weight:bold;">💀 x 6</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Golem corrupto de inmensa resistencia.</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 250</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
+                </div>
+                <strong>Botín:</strong>
+                <ul>
+                    <li><a href="accessories.html">Mejora de Hierro</a> (100%)</li>
+                    <li>Hierro (100%)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Caballero Poseido -->
+        <div class="card boss-card">
+            <div class="card-header">
+                <div class="card-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path
+                            d="M12,2A9,9 0 0,0 3,11C3,14.03 4.53,16.72 6.9,18.25L5.7,21.77L7.6,22.42L10.38,15.5C10.9,15.67 11.45,15.75 12,15.75C16.97,15.75 21,11.72 21,6.75A9,9 0 0,0 12,2M10.5,8A1.5,1.5 0 1,1 12,9.5A1.5,1.5 0 0,1 10.5,8M15,11H9V10H15V11Z" />
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="card-title">Caballero Poseído</h3>
+                    <div class="danger-level" title="Peligro: 8/10">
+                        <span style="color:red; font-weight:bold;">💀 x 8</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card-content">
+                <p>Un antiguo héroe caído controlado por fuerzas oscuras. ¡Cuidado con su segunda fase!</p>
+                <div class="stat-grid">
+                    <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 500+</span>
+                    <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 1-4</span>
+                </div>
+                <strong>Botín:</strong>
+                <ul>
+                    <li>Placa Kobold</li>
+                    <li>Monedas Plata</li>
+                </ul>
+            </div>
+        </div>
+    </div>
     </div>
 
     <footer>

@@ -160,10 +160,18 @@ a:hover {
 }
 
 .stat-icon {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-right: 4px;
+    width: 20px !important;
+    height: 20px !important;
+    min-width: 20px;
+    object-fit: contain;
+    vertical-align: text-bottom;
+    margin-right: 6px;
+    display: inline-block;
+}
+
+.stat-grid span {
+    display: flex;
+    align-items: center;
 }
 
 /* Buttons */
