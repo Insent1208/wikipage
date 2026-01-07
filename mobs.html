@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="navbar">
+    <nav class="navbar">
         <div class="logo">DRAKONIA SMP</div>
         <ul class="nav-links">
             <li><a href="index.html">Inicio</a></li>
@@ -33,12 +33,12 @@
             <li><a href="guia.html">Guía de Inicio</a></li>
             <li><a href="updates.html">Actualizaciones</a></li>
         </ul>
-    </div>
+    </nav>
 
-    <div class="hero">
+    <header class="hero">
         <h1>Bestiario</h1>
         <p>Conoce a las criaturas y peligros que acechan en las tierras de Drakonia.</p>
-    </div>
+    </header>
 
     <div class="container">
         <!-- Filter Controls -->
@@ -51,1362 +51,8 @@
 
         <h2>Criaturas de Drakonia</h2>
         <div class="grid" id="mob-grid">
-            <!-- Esqueleto Cuero -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12,2A9,9 0 0,0 3,11C3,14.03 4.53,16.72 6.9,18.25L5.7,21.77L7.6,22.42L10.38,15.5C10.9,15.67 11.45,15.75 12,15.75C16.97,15.75 21,11.72 21,6.75A9,9 0 0,0 12,2M10.5,8A1.5,1.5 0 1,1 12,9.5A1.5,1.5 0 0,1 10.5,8M15,11H9V10H15V11Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Esqueleto de Cuero</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <!-- 1 Skull -->
-                            <svg class="skull-icon-small" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,9A2,2 0 0,1 11,11A2,2 0 0,1 9,13A2,2 0 0,1 7,11A2,2 0 0,1 9,9M15,9A2,2 0 0,1 17,11A2,2 0 0,1 15,13A2,2 0 0,1 13,11A2,2 0 0,1 15,9Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Esqueletos que han logrado equiparse con lo básico.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Cavernas (Nivel < 50)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 15</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.25</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>1</td>
-                            <td>75%</td>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Hueso Duro</a></td>
-                            <td>1</td>
-                            <td>15%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Zombie Cuero -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M12,2A9,9 0 0,0 3,11C3,16 6.9,20 12,20A9,9 0 0,0 21,11C21,6 16.9,2 12,2M12,4A7,7 0 0,1 19,11C19,14.86 15.86,18 12,18A7,7 0 0,1 5,11C5,7.14 8.14,4 12,4M10,7A1,1 0 0,0 9,8A1,1 0 0,0 10,9A1,1 0 0,0 11,8A1,1 0 0,0 10,7M14,7A1,1 0 0,0 13,8A1,1 0 0,0 14,9A1,1 0 0,0 15,8A1,1 0 0,0 14,7Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Zombie de Cuero</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <!-- 1 Skull -->
-                            <svg class="skull-icon-small" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,9A2,2 0 0,1 11,11A2,2 0 0,1 9,13A2,2 0 0,1 7,11A2,2 0 0,1 9,9M15,9A2,2 0 0,1 17,11A2,2 0 0,1 15,13A2,2 0 0,1 13,11A2,2 0 0,1 15,9Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Caminantes protegidos.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Cavernas (Nivel < 50)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 20</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.25</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>1</td>
-                            <td>75%</td>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Carne Muerto</a></td>
-                            <td>1</td>
-                            <td>10%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Minero -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path
-                                d="M14.68,12.62L13.27,11.21L15.39,9.09L12.92,6.62L5.86,13.68L4.45,12.27L11.5,5.21L9.04,2.74L11.16,0.62L17.5,7L23.32,12.77L21.91,14.19L19.09,11.36L16.27,14.19L20.5,18.42L19.09,19.83L14.86,15.6L13.45,17L12.04,15.6L14.68,12.62M3,18.17L4.41,19.59L9.17,14.83L7.76,13.42L3,18.17Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Minero Maldito</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <!-- 2 Skulls -->
-                            <svg class="skull-icon-small" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,9A2,2 0 0,1 11,11A2,2 0 0,1 9,13A2,2 0 0,1 7,11A2,2 0 0,1 9,9M15,9A2,2 0 0,1 17,11A2,2 0 0,1 15,13A2,2 0 0,1 13,11A2,2 0 0,1 15,9Z" />
-                            </svg>
-                            <svg class="skull-icon-small" viewBox="0 0 24 24">
-                                <path
-                                    d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,9A2,2 0 0,1 11,11A2,2 0 0,1 9,13A2,2 0 0,1 7,11A2,2 0 0,1 9,9M15,9A2,2 0 0,1 17,11A2,2 0 0,1 15,13A2,2 0 0,1 13,11A2,2 0 0,1 15,9Z" />
-                            </svg>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Antiguos mineros corruptos.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Profundidades (Nivel < 30)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 35</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.25</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Carbón</td>
-                            <td>1-2</td>
-                            <td>80%</td>
-                        </tr>
-                        <tr>
-                            <td>Hierro</td>
-                            <td>1</td>
-                            <td>50%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Escarabajo -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Escarabajo</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Pequeño pero venenoso.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Jungla (Superficie)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 18</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.30</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Escarabajo Dorado</a></td>
-                            <td>1</td>
-                            <td>5%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>5-10</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Cangrejo -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Cangrejo</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Habitante de las costas, con pinzas afiladas.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Playas / Costas</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 2</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.20</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Anillo Cangrejo</a></td>
-                            <td>1</td>
-                            <td>10%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>5-10</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Escorpion -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Escorpión</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Ataca con veneno mortal.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Desiertos</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 28</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.32</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>8-12</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Slimiel -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Slimiel</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Slime hecho de miel pegajosa.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Bosques de Flores / Jungla</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 30</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 3</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.25</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Anillo Miel</a></td>
-                            <td>1</td>
-                            <td>5%</td>
-                        </tr>
-                        <tr>
-                            <td>Tarro de Miel</td>
-                            <td>1-3</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>4-8</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Slimlavera -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Slimlavera</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Un slime fusionado con restos óseos.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Superficie (Nocturno)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 35</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 4</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.25</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Calavera de Slime</a></td>
-                            <td>1</td>
-                            <td>5%</td>
-                        </tr>
-                        <tr>
-                            <td>Huesos</td>
-                            <td>3-5</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>5-10</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Slimar -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Slimar (Peq/Med/Gran)</h3>
-                        <div class="danger-level" title="Peligro: 1-3/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <span style="color:#aaa;font-size:0.8rem"> - </span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Masa de experiencia viviente. Viene en 3 tamaños.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición: Superficie</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 10-50</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 1-5</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed:
-                            0.20-0.35</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Pluma</a></td>
-                            <td>1</td>
-                            <td>10%</td>
-                        </tr>
-                        <tr>
-                            <td>Bolas de Slime</td>
-                            <td>1-5</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>5-40</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-            <!-- Saqueador Acorazado -->
-            <div class="card" data-danger="3">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Saqueador Acorazado</h3>
-                        <div class="danger-level" title="Peligro: 3/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE
-                                PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Merodeador protegido con armadura de hierro.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Bosques (Día)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 40</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 5</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.30</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Acero Bruto</td>
-                            <td>1</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>1-2</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>10-15</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Aldeano Vampiro -->
-            <div class="card" data-danger="3">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Aldeano Vampiro</h3>
-                        <div class="danger-level" title="Peligro: 3/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE
-                                PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Aldeano infectado. Al morir libera su verdadera forma.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Bosques (Noche)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 50</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 5</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.35</span>
-                    </div>
-                    <strong>Habilidad:</strong>
-                    <p style="font-size: 0.9rem; color: #ccc;">Invoca Murciélago Vampiro al morir.</p>
-                </div>
-            </div>
-
-            <!-- Murciélago Vampiro -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div>
-                        <h3 class="card-title">Murciélago Vampiro</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">NIVEL
-                                DE
-                                PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>La forma verdadera del vampiro.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Invocado</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida"> Vida: 10</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño"> Daño: 1</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed"> Speed: 0.4</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>1-3</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Plata</td>
-                            <td>1</td>
-                            <td>20%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Ghoul de Minas -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Ghoul de Minas</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Habitante de las profundidades.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Profundidades (Y < 25)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 35</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 2</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Sangre Vampírica</a></td>
-                            <td>1</td>
-                            <td>3%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>3-7</td>
-                            <td>75%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Plata</td>
-                            <td>1</td>
-                            <td>20%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Armadura Viviente -->
-            <div class="card" data-danger="4">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Armadura Viviente</h3>
-                        <div class="danger-level" title="Peligro: 4/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Conjunto de hierro poseído. Invisible.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Deepslate (Y < 0)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 75</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 1</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>15-25</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>5-15</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Plata</td>
-                            <td>1-3</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Murciélago Gigante -->
-            <div class="card" data-danger="5">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Murciélago Gigante</h3>
-                        <div class="danger-level" title="Peligro: 5/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Terror ciego de las cuevas. Causa ceguera.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Deepslate (Y < 0)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 100</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 5</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Ídolo Vampírico</a></td>
-                            <td>1</td>
-                            <td>5%</td>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>10-15</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>5-15</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Plata</td>
-                            <td>1-3</td>
-                            <td>50%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Sombra -->
-            <div class="card" data-danger="5">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Sombra</h3>
-                        <div class="danger-level" title="Peligro: 5/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Espíritu oscuro invisible.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Deepslate (Y < 0)</em>
-                    </p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 10</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 5</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.30</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>5-10</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>1-5</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Plata</td>
-                            <td>1</td>
-                            <td>30%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- MegaHormiga -->
-            <div class="card" data-danger="3">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">MegaHormiga</h3>
-                        <div class="danger-level" title="Peligro: 3/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Silverfish gigante mutado.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Minas / Jungla</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 35</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 3</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 2</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.40</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>3-6</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Cazavampiros -->
-            <div class="card" data-danger="3">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Cazavampiros</h3>
-                        <div class="danger-level" title="Peligro: 3/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Vindicador exiliado que caza monstruos.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Bosques (Día)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 40</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 3</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.30</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td><a href="accessories.html">Cadena de Ajo</a></td>
-                            <td>1</td>
-                            <td>25%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Pantanoso -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Pantanoso</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Esqueleto cubierto de lodo y musgo.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Pantanos</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 25</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 1</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.20</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.8rem;">Efectos: Veneno, Lentitud</p>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>8-15</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Huesos</td>
-                            <td>1-3</td>
-                            <td>80%</td>
-                        </tr>
-                        <tr>
-                            <td>Slime Ball</td>
-                            <td>1-2</td>
-                            <td>40%</td>
-                        </tr>
-                        <tr>
-                            <td>Moneda Cobre</td>
-                            <td>1-3</td>
-                            <td>70%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Avispa -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Avispa</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Abeja agresiva de color amarillo intenso.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Jungla (Día)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 12</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.40</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>2-5</td>
-                            <td>100%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Lushbee -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Lushbee</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Abeja adaptada a las cuevas frondosas.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Lush Caves</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 12</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.40</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>3-6</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Bloque Musgo</td>
-                            <td>1-2</td>
-                            <td>50%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Hongbeja -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Hongbeja</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Abeja simbiótica con hongos.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Dark Forest</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 12</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.40</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>3-6</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Hongos Rojos/Marrones</td>
-                            <td>1-2</td>
-                            <td>50% c/u</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Alumbrabeja -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Alumbrabeja</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Abeja brillante bioluminiscente.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Lush Caves</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 12</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 2</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.40</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>3-6</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Glow Berries</td>
-                            <td>1-3</td>
-                            <td>60%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Polilla -->
-            <div class="card" data-danger="1">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Polilla</h3>
-                        <div class="danger-level" title="Peligro: 1/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Insecto nocturno inofensivo atraído por la luz.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            Bosques (Noche)</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 8</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 1</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.30</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>3-6</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Hilo</td>
-                            <td>1-3</td>
-                            <td>70%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Tarantula -->
-            <div class="card" data-danger="2">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Tarántula</h3>
-                        <div class="danger-level" title="Peligro: 2/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Araña peluda que puede aturdir.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            General</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 30</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 5</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.35</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.8rem;">Efecto: Stun (Aturdimiento)</p>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Hilo</td>
-                            <td>1-3</td>
-                            <td>80%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Venoctoide -->
-            <div class="card" data-danger="4">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Venoctoide</h3>
-                        <div class="danger-level" title="Peligro: 4/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Araña tóxica verde.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            General</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 35</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 5</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 0</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.35</span>
-                    </div>
-                    <p style="color: #aaa; font-size: 0.8rem;">Efecto: Veneno IV (Mortal)</p>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Hilo</td>
-                            <td>1-3</td>
-                            <td>80%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
-
-            <!-- Megaracnida -->
-            <div class="card" data-danger="5">
-                <div class="card-header">
-                    <div class="card-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path fill="currentColor"
-                                d="M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z" />
-                        </svg>
-                    </div>
-                    <div>
-                        <h3 class="card-title">Megaracnida</h3>
-                        <div class="danger-level" title="Peligro: 5/10">
-                            <span class="danger-label"
-                                style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                            <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-content">
-                    <p>Araña reina gigante. Invoca crías.</p>
-                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍
-                            Aparición:
-                            General</em></p>
-                    <div class="stat-grid">
-                        <span><img src="assets/icons/stat-heart.svg" class="stat-icon"> HP: 125</span>
-                        <span><img src="assets/icons/stat-sword.svg" class="stat-icon"> Dmg: 10</span>
-                        <span><img src="assets/icons/stat-shield.svg" class="stat-icon"> Armor: 2</span>
-                        <span><img src="assets/icons/stat-speed.svg" class="stat-icon"> Speed: 0.40</span>
-                    </div>
-                    <strong>Botín:</strong>
-                    <table class="drop-table">
-                        <tr>
-                            <th>Item</th>
-                            <th>Cant.</th>
-                            <th>Prob.</th>
-                        </tr>
-                        <tr>
-                            <td>Exp</td>
-                            <td>15-25</td>
-                            <td>100%</td>
-                        </tr>
-                        <tr>
-                            <td>Hilo</td>
-                            <td>13-45</td>
-                            <td>90%</td>
-                        </tr>
-                    </table>
-                </div>
-            </div>
+            <!-- Mobs will be rendered here by JavaScript -->
         </div>
-    </div>
     </div>
 
     <footer>
@@ -1414,31 +60,543 @@
     </footer>
 
     <script>
-        function filterMobs(level) {
-            const cards = document.querySelectorAll('#mob-grid .card');
-            const buttons = document.querySelectorAll('.filter-btn');
+        // Mob Data Source - Verified from MythicMobs Configs
+        const mobs = [
+            {
+                name: "Esqueleto de Cuero",
+                danger: 1,
+                hp: 15,
+                dmg: 4,
+                armor: 0,
+                speed: 0.25,
+                desc: "Esqueletos que han logrado equiparse con lo básico.",
+                spawn: "Cavernas (Nivel < 50)",
+                icon: "M12,2A9,9 0 0,0 3,11C3,14.03 4.53,16.72 6.9,18.25L5.7,21.77L7.6,22.42L10.38,15.5C10.9,15.67 11.45,15.75 12,15.75C16.97,15.75 21,11.72 21,6.75A9,9 0 0,0 12,2M10.5,8A1.5,1.5 0 1,1 12,9.5A1.5,1.5 0 0,1 10.5,8M15,11H9V10H15V11Z",
+                drops: [
+                    { item: "Moneda Cobre", qty: "1", prob: "75%" },
+                    { item: "Hueso Duro", url: "accessories.html", qty: "1", prob: "15%" }
+                ]
+            },
+            {
+                name: "Zombie de Cuero",
+                danger: 1,
+                hp: 20,
+                dmg: 4,
+                armor: 0,
+                speed: 0.25,
+                desc: "Caminantes protegidos.",
+                spawn: "Cavernas (Nivel < 50)",
+                icon: "M12,2A9,9 0 0,0 3,11C3,16 6.9,20 12,20A9,9 0 0,0 21,11C21,6 16.9,2 12,2M12,4A7,7 0 0,1 19,11C19,14.86 15.86,18 12,18A7,7 0 0,1 5,11C5,7.14 8.14,4 12,4M10,7A1,1 0 0,0 9,8A1,1 0 0,0 10,9A1,1 0 0,0 11,8A1,1 0 0,0 10,7M14,7A1,1 0 0,0 13,8A1,1 0 0,0 14,9A1,1 0 0,0 15,8A1,1 0 0,0 14,7Z",
+                drops: [
+                    { item: "Moneda Cobre", qty: "1", prob: "75%" },
+                    { item: "Carne Muerto", url: "accessories.html", qty: "1", prob: "10%" }
+                ]
+            },
+            {
+                name: "Minero Maldito",
+                danger: 2,
+                hp: 35,
+                dmg: 2,
+                armor: 0,
+                speed: 0.25,
+                desc: "Antiguos mineros corruptos.",
+                spawn: "Profundidades (Nivel < 30)",
+                icon: "M14.68,12.62L13.27,11.21L15.39,9.09L12.92,6.62L5.86,13.68L4.45,12.27L11.5,5.21L9.04,2.74L11.16,0.62L17.5,7L23.32,12.77L21.91,14.19L19.09,11.36L16.27,14.19L20.5,18.42L19.09,19.83L14.86,15.6L13.45,17L12.04,15.6L14.68,12.62M3,18.17L4.41,19.59L9.17,14.83L7.76,13.42L3,18.17Z",
+                drops: [
+                    { item: "Carbón", qty: "5-12", prob: "80%" },
+                    { item: "Hierro Bruto", qty: "5-15", prob: "50%" },
+                    { item: "Oro Bruto", qty: "5-15", prob: "20%" },
+                    { item: "Pico de Hierro", qty: "1", prob: "10%" }
+                ]
+            },
+            {
+                name: "Escarabajo",
+                danger: 1,
+                hp: 18,
+                dmg: 3,
+                armor: 0,
+                speed: 0.30,
+                desc: "Pequeño pero venenoso.",
+                spawn: "Jungla (Superficie)",
+                skull: true,
+                drops: [
+                    { item: "Escarabajo Dorado", url: "accessories.html", qty: "1", prob: "5%" },
+                    { item: "Exp", qty: "5-10", prob: "100%" }
+                ]
+            },
+            {
+                name: "Cangrejo",
+                danger: 1,
+                hp: 30,
+                dmg: 2,
+                armor: 2,
+                speed: 0.20,
+                desc: "Habitante de las costas, con pinzas afiladas.",
+                spawn: "Playas / Costas",
+                skull: true,
+                drops: [
+                    { item: "Anillo Cangrejo", url: "accessories.html", qty: "1", prob: "10%" },
+                    { item: "Exp", qty: "5-10", prob: "100%" }
+                ]
+            },
+            {
+                name: "Escorpión",
+                danger: 2,
+                hp: 28,
+                dmg: 5,
+                armor: 0,
+                speed: 0.32,
+                desc: "Ataca con veneno mortal.",
+                spawn: "Desiertos",
+                skull: true,
+                drops: [
+                    { item: "Exp", qty: "8-12", prob: "100%" }
+                ]
+            },
+            {
+                name: "Slimiel",
+                danger: 1,
+                hp: 30,
+                dmg: 3,
+                armor: 0,
+                speed: 0.25,
+                desc: "Slime hecho de miel pegajosa.",
+                spawn: "Bosques de Flores / Jungla",
+                skull: true,
+                drops: [
+                    { item: "Anillo Miel", url: "accessories.html", qty: "1", prob: "5%" },
+                    { item: "Tarro de Miel", qty: "1-3", prob: "100%" },
+                    { item: "Exp", qty: "4-8", prob: "100%" }
+                ]
+            },
+            {
+                name: "Slimlavera",
+                danger: 2,
+                hp: 35,
+                dmg: 4,
+                armor: 0,
+                speed: 0.25,
+                desc: "Un slime fusionado con restos óseos.",
+                spawn: "Superficie (Nocturno)",
+                skull: true,
+                drops: [
+                    { item: "Calavera de Slime", url: "accessories.html", qty: "1", prob: "5%" },
+                    { item: "Huesos", qty: "3-5", prob: "100%" },
+                    { item: "Exp", qty: "5-10", prob: "100%" }
+                ]
+            },
+            {
+                name: "Slimar (Peq/Med/Gran)",
+                danger: 3,
+                dangerText: "1-3",
+                hp: "10-50",
+                dmg: "1-5",
+                armor: 0,
+                speed: "0.20-0.35",
+                desc: "Masa de experiencia viviente. Viene en 3 tamaños.",
+                spawn: "Superficie",
+                skull: true,
+                drops: [
+                    { item: "Pluma", url: "accessories.html", qty: "1", prob: "10%" },
+                    { item: "Bolas de Slime", qty: "1-5", prob: "100%" },
+                    { item: "Exp", qty: "5-40", prob: "100%" }
+                ]
+            },
+            {
+                name: "Saqueador Acorazado",
+                danger: 3,
+                hp: 40,
+                dmg: 2,
+                armor: 5,
+                speed: 0.30,
+                desc: "Merodeador protegido con armadura de hierro.",
+                spawn: "Bosques (Día)",
+                skull: true,
+                drops: [
+                    { item: "Acero Bruto", qty: "1", prob: "100%" },
+                    { item: "Moneda Cobre", qty: "1-2", prob: "100%" },
+                    { item: "Exp", qty: "10-15", prob: "100%" }
+                ]
+            },
+            {
+                name: "Aldeano Vampiro",
+                danger: 3,
+                hp: 50,
+                dmg: 5,
+                armor: 0,
+                speed: 0.35,
+                desc: "Aldeano infectado. Al morir libera su verdadera forma.",
+                spawn: "Bosques (Noche)",
+                skull: true,
+                ability: "Invoca Murciélago Vampiro al morir.",
+                drops: [
+                    { item: "Estaca Protectora", url: "accessories.html", qty: "1", prob: "10%" }
+                ]
+            },
+            {
+                name: "Murciélago Vampiro",
+                danger: 1,
+                hp: 10,
+                dmg: 1,
+                armor: 0,
+                speed: 0.40,
+                desc: "La forma verdadera del vampiro.",
+                spawn: "Invocado",
+                skull: true,
+                drops: [
+                    { item: "Moneda Cobre", qty: "1-3", prob: "100%" },
+                    { item: "Moneda Plata", qty: "1", prob: "20%" },
+                    { item: "Estaca Protectora", url: "accessories.html", qty: "1", prob: "10%" }
+                ]
+            },
+            {
+                name: "Ghoul de Minas",
+                danger: 2,
+                hp: 35,
+                dmg: 2,
+                armor: 0,
+                speed: 0.25,
+                desc: "Habitante de las profundidades.",
+                spawn: "Profundidades (Y < 25)",
+                icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",
+                drops: [
+                    { item: "Sangre Vampírica", url: "accessories.html", qty: "1", prob: "3%" },
+                    { item: "Moneda Cobre", qty: "3-7", prob: "75%" },
+                    { item: "Moneda Plata", qty: "1", prob: "20%" }
+                ]
+            },
+            {
+                name: "Armadura Viviente",
+                danger: 4,
+                hp: 75,
+                dmg: 1,
+                armor: 0,
+                speed: 0.25, // Default for zombie
+                desc: "Conjunto de hierro poseído. Invisible.",
+                spawn: "Deepslate (Y < 0)",
+                icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",
+                drops: [
+                    { item: "Exp", qty: "15-25", prob: "100%" },
+                    { item: "Moneda Cobre", qty: "5-15", prob: "100%" },
+                    { item: "Moneda Plata", qty: "1-3", prob: "100%" }
+                ]
+            },
+            {
+                name: "Murciélago Gigante",
+                danger: 5,
+                hp: 100,
+                dmg: 5,
+                armor: 0,
+                speed: 0.30, // Usually bats are fast
+                desc: "Terror ciego de las cuevas. Causa ceguera.",
+                spawn: "Deepslate (Y < 0)",
+                icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",
+                drops: [
+                    { item: "Ídolo Vampírico", url: "accessories.html", qty: "1", prob: "5%" },
+                    { item: "Exp", qty: "10-15", prob: "100%" },
+                    { item: "Moneda Cobre", qty: "5-15", prob: "100%" },
+                    { item: "Moneda Plata", qty: "1-3", prob: "50%" }
+                ]
+            },
+            {
+                name: "Sombra",
+                danger: 5,
+                hp: 10,
+                dmg: 5,
+                armor: 0,
+                speed: 0.30,
+                desc: "Espíritu oscuro invisible.",
+                spawn: "Deepslate (Y < 0)",
+                icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",
+                drops: [
+                    { item: "Exp", qty: "5-10", prob: "100%" },
+                    { item: "Moneda Cobre", qty: "1-5", prob: "100%" },
+                    { item: "Moneda Plata", qty: "1", prob: "30%" }
+                ]
+            },
+            {
+                name: "MegaHormiga",
+                danger: 3,
+                hp: 35,
+                dmg: 3,
+                armor: 2,
+                speed: 0.40,
+                desc: "Silverfish gigante mutado.",
+                spawn: "Minas / Jungla",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [
+                    { item: "Exp", qty: "3-6", prob: "100%" }
+                ]
+            },
+            {
+                name: "Cazavampiros",
+                danger: 3,
+                hp: 40,
+                dmg: 2,
+                armor: 3,
+                speed: 0.30,
+                desc: "Vindicador exiliado que caza monstruos.",
+                spawn: "Bosques (Día)",
+                icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",
+                drops: [
+                    { item: "Cadena de Ajo", url: "accessories.html", qty: "1", prob: "25%" },
+                    { item: "Moneda Cobre", qty: "1-5", prob: "100%" },
+                    { item: "Moneda Plata", qty: "1", prob: "100%" },
+                ]
+            },
+            {
+                name: "Pantanoso",
+                danger: 2,
+                hp: 25,
+                dmg: 1,
+                armor: 0,
+                speed: 0.20,
+                desc: "Esqueleto cubierto de lodo y musgo.",
+                spawn: "Pantanos",
+                icon: "M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z",
+                effect: "Efectos: Veneno, Lentitud",
+                drops: [
+                    { item: "Exp", qty: "8-15", prob: "100%" },
+                    { item: "Huesos", qty: "1-3", prob: "80%" },
+                    { item: "Slime Ball", qty: "1-2", prob: "40%" },
+                    { item: "Moneda Cobre", qty: "1-3", prob: "70%" }
+                ]
+            },
+            {
+                name: "Avispa",
+                danger: 2,
+                hp: 12,
+                dmg: 2,
+                armor: 0,
+                speed: 0.40,
+                desc: "Abeja agresiva de color amarillo intenso.",
+                spawn: "Jungla (Día)",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [{ item: "Exp", qty: "2-5", prob: "100%" }]
+            },
+            {
+                name: "Lushbee",
+                danger: 1,
+                hp: 12,
+                dmg: 2,
+                armor: 0,
+                speed: 0.40,
+                desc: "Abeja adaptada a las cuevas frondosas.",
+                spawn: "Lush Caves",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [
+                    { item: "Exp", qty: "3-6", prob: "100%" },
+                    { item: "Bloque Musgo", qty: "1-2", prob: "50%" }
+                ]
+            },
+            {
+                name: "Hongbeja",
+                danger: 1,
+                hp: 12,
+                dmg: 2,
+                armor: 0,
+                speed: 0.40,
+                desc: "Abeja simbiótica con hongos.",
+                spawn: "Dark Forest",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [
+                    { item: "Exp", qty: "3-6", prob: "100%" },
+                    { item: "Hongos", qty: "1-2", prob: "50%" }
+                ]
+            },
+            {
+                name: "Alumbrabeja",
+                danger: 1,
+                hp: 12,
+                dmg: 2,
+                armor: 0,
+                speed: 0.40,
+                desc: "Abeja brillante bioluminiscente.",
+                spawn: "Lush Caves",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [
+                    { item: "Exp", qty: "3-6", prob: "100%" },
+                    { item: "Glow Berries", qty: "1-3", prob: "60%" }
+                ]
+            },
+            {
+                name: "Polilla",
+                danger: 1,
+                hp: 12,
+                dmg: 2,
+                armor: 0,
+                speed: 0.30,
+                desc: "Insecto nocturno inofensivo atraído por la luz.",
+                spawn: "Bosques (Noche)",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [
+                    { item: "Exp", qty: "3-6", prob: "100%" },
+                    { item: "Hilo", qty: "1-3", prob: "70%" }
+                ]
+            },
+            {
+                name: "Tarántula",
+                danger: 2,
+                hp: 30,
+                dmg: 5,
+                armor: 0,
+                speed: 0.35,
+                desc: "Araña peluda que puede aturdir.",
+                spawn: "General",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                effect: "Efecto: Stun (Aturdimiento)",
+                drops: [
+                    { item: "Hilo", qty: "1-3", prob: "80%" }
+                ]
+            },
+            {
+                name: "Venoctoide",
+                danger: 4,
+                hp: 35,
+                dmg: 5,
+                armor: 0,
+                speed: 0.35,
+                desc: "Araña tóxica verde.",
+                spawn: "General",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                effect: "Efecto: Veneno IV (Mortal)",
+                drops: [
+                    { item: "Hilo", qty: "1-3", prob: "80%" }
+                ]
+            },
+            {
+                name: "Megaracnida",
+                danger: 5,
+                hp: 125,
+                dmg: 10,
+                armor: 2,
+                speed: 0.40,
+                desc: "Araña reina gigante. Invoca crías.",
+                spawn: "General",
+                icon: "M19,13H17V11H19A2,2 0 0,0 17,9C17,9 14,3 12,3C10,3 7,9 7,9A2,2 0 0,0 5,11H7V13H5A2,2 0 0,0 3,15V21H5V18H19V21H21V15A2,2 0 0,0 19,13Z",
+                drops: [
+                    { item: "Exp", qty: "15-25", prob: "100%" },
+                    { item: "Hilo", qty: "13-45", prob: "90%" }
+                ]
+            }
+        ];
 
-            // Update active button
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+        function renderMobs(level) {
+            const grid = document.getElementById('mob-grid');
+            grid.innerHTML = ''; // Clear existing
 
-            cards.forEach(card => {
-                const danger = parseInt(card.getAttribute('data-danger'));
+            mobs.forEach(mob => {
+                // Filter Logic
+                let show = false;
+                if (level === 'all') show = true;
+                else if (level === 'low' && mob.danger >= 1 && mob.danger <= 3) show = true;
+                else if (level === 'medium' && mob.danger >= 4 && mob.danger <= 6) show = true;
+                else if (level === 'high' && mob.danger >= 7) show = true;
 
-                if (level === 'all') {
-                    card.style.display = 'block';
-                } else if (level === 'low') {
-                    if (danger >= 1 && danger <= 3) card.style.display = 'block';
-                    else card.style.display = 'none';
-                } else if (level === 'medium') {
-                    if (danger >= 4 && danger <= 6) card.style.display = 'block';
-                    else card.style.display = 'none';
-                } else if (level === 'high') {
-                    if (danger >= 7) card.style.display = 'block';
-                    else card.style.display = 'none';
+                if (!show) return;
+
+                // Create Card
+                const card = document.createElement('div');
+                card.className = 'card';
+                card.setAttribute('data-danger', mob.danger);
+                // Icons - SVG Paths
+                const heartIcon = '<img src="assets/icons/stat-heart.svg" class="stat-icon" alt="Vida">';
+                const swordIcon = '<img src="assets/icons/stat-sword.svg" class="stat-icon" alt="Daño">';
+                const shieldIcon = '<img src="assets/icons/stat-shield.svg" class="stat-icon" alt="Armor">';
+                const speedIcon = '<img src="assets/icons/stat-speed.svg" class="stat-icon" alt="Speed">';
+                const skullIcon = '<svg class="skull-icon-small" viewBox="0 0 24 24"><path d="M12,2A7,7 0 0,0 5,9C5,11.38 6.19,13.47 8,14.74V17A1,1 0 0,0 9,18H15A1,1 0 0,0 16,17V14.74C17.81,13.47 19,11.38 19,9A7,7 0 0,0 12,2M9,9A2,2 0 0,1 11,11A2,2 0 0,1 9,13A2,2 0 0,1 7,11A2,2 0 0,1 9,9M15,9A2,2 0 0,1 17,11A2,2 0 0,1 15,13A2,2 0 0,1 13,11A2,2 0 0,1 15,9Z" /></svg>';
+
+                // Danger Skulls Generation
+                let skulls = '';
+                const dangerCount = (typeof mob.dangerText === 'string') ? 3 : mob.danger; // Default show for range
+
+                if (typeof mob.dangerText === 'string') {
+                    // Custom danger display logic if needed, but for now just showing skulls
+                    skulls += `<img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull"> <span style="color:#aaa;font-size:0.8rem"> - </span> <img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull"><img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">`;
+                } else {
+                    for (let i = 0; i < mob.danger; i++) {
+                        if (mob.skull) {
+                            // Use image if requested (for consistency with prev design on some mobs) or SVG
+                            // Previous code used both. Let's standardize to SVG for implementation unless specific override?
+                            // Actually previous code used <img src... stat-skull.svg> mostly in recent edits.
+                            skulls += `<img src="assets/icons/stat-skull.svg" class="stat-icon" alt="Skull">`;
+                        } else {
+                            skulls += skullIcon;
+                        }
+                    }
                 }
+
+                // Use default SVG for icon if simple string
+                let cardIconHtml = '';
+                if (mob.icon) {
+                    cardIconHtml = `<svg viewBox="0 0 24 24"><path fill="currentColor" d="${mob.icon}" /></svg>`;
+                } else {
+                    // Default fallback
+                    cardIconHtml = `<svg viewBox="0 0 24 24"><path fill="currentColor" d="M12,2A9,9 0 0,0 3,11C3,16 6.9,20 12,20A9,9 0 0,0 21,11C21,6 16.9,2 12,2M12,4A7,7 0 0,1 19,11C19,14.86 15.86,18 12,18A7,7 0 0,1 5,11C5,7.14 8.14,4 12,4M10,7A1,1 0 0,0 9,8A1,1 0 0,0 10,9A1,1 0 0,0 11,8A1,1 0 0,0 10,7M14,7A1,1 0 0,0 13,8A1,1 0 0,0 14,9A1,1 0 0,0 15,8A1,1 0 0,0 14,7Z" /></svg>`;
+                }
+
+                // Drop Table Construction
+                let dropTable = '';
+                if (mob.drops && mob.drops.length > 0) {
+                    let rows = '';
+                    mob.drops.forEach(d => {
+                        let name = d.item;
+                        if (d.url) name = `<a href="${d.url}">${name}</a>`;
+                        rows += `<tr><td>${name}</td><td>${d.qty}</td><td>${d.prob}</td></tr>`;
+                    });
+                    dropTable = `
+                        <strong>Botín:</strong>
+                        <table class="drop-table">
+                            <tr><th>Item</th><th>Cant.</th><th>Prob.</th></tr>
+                            ${rows}
+                        </table>`;
+                }
+
+                // Build Ability/Effect text if exists
+                let extraText = '';
+                if (mob.ability) extraText += `<p style="font-size: 0.9rem; color: #ccc;"><strong>Habilidad:</strong> ${mob.ability}</p>`;
+                if (mob.effect) extraText += `<p style="color: #aaa; font-size: 0.8rem;">${mob.effect}</p>`;
+
+                card.innerHTML = `
+                <div class="card-header">
+                    <div class="card-icon">${cardIconHtml}</div>
+                    <div>
+                        <h3 class="card-title">${mob.name}</h3>
+                        <div class="danger-level" title="Peligro: ${mob.dangerText || mob.danger}/10">
+                            <span class="danger-label" style="font-size: 0.8rem; color: #aaa; margin-right: 5px;">PELIGRO:</span>
+                            ${skulls}
+                        </div>
+                    </div>
+                </div>
+                <div class="card-content">
+                    <p>${mob.desc}</p>
+                    <p class="spawn-info" style="font-size: 0.9rem; color: #aaa; margin-bottom: 0.5rem;"><em>📍 Aparición: ${mob.spawn}</em></p>
+                    <div class="stat-grid">
+                        <span>${heartIcon} Vida: ${mob.hp}</span>
+                        <span>${swordIcon} Daño: ${mob.dmg}</span>
+                        <span>${shieldIcon} Armor: ${mob.armor}</span>
+                        <span>${speedIcon} Speed: ${mob.speed}</span>
+                    </div>
+                    ${extraText}
+                    ${dropTable}
+                </div>
+                `;
+                grid.appendChild(card);
             });
         }
+
+        function filterMobs(level) {
+            // Update Active Button
+            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            renderMobs(level);
+        }
+
+        // Initial Render
+        document.addEventListener('DOMContentLoaded', () => {
+            renderMobs('all');
+        });
     </script>
 </body>
 
