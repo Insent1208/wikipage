@@ -51,3 +51,38 @@ Cuando veas estos valores en el campo `tier:` de MMOItems:
 - `COMUN` → ⭐ (1 estrella)
 - `NOCOMUN` → ⭐⭐ (2 estrellas)  
 - `RARE` → ⭐⭐⭐ (3 estrellas)
+
+## Guía de Actualización de Mobs (Wiki)
+El archivo `mobs.html` ahora usa un sistema optimizado con Javascript. Para agregar u editar mobs, no toques el HTML principal. Ve al final del documento, dentro de la etiqueta `<script>`.
+
+### Cómo agregar un nuevo Mob
+Busca la lista `const mobs = [ ... ]` y agrega un nuevo bloque de datos siguiendo este formato:
+
+```javascript
+{
+    name: "Nombre del Mob",
+    danger: 3,                 // Nivel de peligro (1-10)
+    hp: 40,                    // Vida
+    dmg: 5,                    // Daño
+    armor: 2,                  // Armadura
+    speed: 0.30,               // Velocidad
+    desc: "Descripción breve.",
+    spawn: "Ubicación",
+    // Icono SVG (copiar el 'path d="..."' de un SVG de Material Design o similar)
+    icon: "M12,2A...", 
+    // Si quieres que tenga calaveras extra en el icono (como jefes)
+    // skull: true,
+    
+    // Lista de Drops
+    drops: [
+        { item: "Nombre Item", qty: "1-2", prob: "100%" },
+        // Si el item tiene enlace a accesorios:
+        { item: "Item Raro", url: "accessories.html", qty: "1", prob: "5%" }
+    ]
+},
+```
+
+### Notas Importantes
+- **Iconos**: El sistema usa "SVG Paths". Puedes buscar iconos en sitios como [Pictogrammers](https://pictogrammers.com/library/mdi/) y copiar solo lo que está dentro de `d="..."`.
+- **Orden**: Los mobs se muestran en el orden en que aparecen en la lista.
+- **Filtros**: El sistema de filtros por nivel de peligro (Bajo/Medio/Alto) es automático basado en el valor `danger`.
