@@ -111,11 +111,18 @@ a:hover {
     color: #ccc;
 }
 
+/* Container */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
+
 /* Grid Layout */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
 /* Cards */
@@ -142,6 +149,16 @@ a:hover {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--border-color);
     padding-bottom: 0.5rem;
+}
+
+.card-header>div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card-icon {
+    display: none;
 }
 
 .card-icon svg {
